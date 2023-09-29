@@ -1,0 +1,27 @@
+
+<div class="container">
+  <section class="formulario">
+    <div>
+      <img src="../../../assets/logo.svg" alt="imagem" />
+    </div>
+    <div>
+      <article class="card">
+        <h1>Busca por cep:</h1>
+        <div class="actions">
+          <input placeholder="Digite um cep válido" type="text" [(ngModel)]="cep" />
+          <button (click)="searchCEP()">Pesquisar</button>
+        </div>
+        <div class="texts">
+          <h3>CEP: {{ cepData.cep }}</h3>
+          <h3>Logradouro: {{ cepData.logradouro }}</h3>
+          <h3>Bairro: {{ cepData.bairro }}</h3>
+          <h3>Cidade: {{ cepData.localidade }}</h3>
+          <h3>Estado: {{ cepData.uf }}</h3>
+        </div>
+        <ng-template #notfound>
+          <h1>Cep inválido</h1>
+        </ng-template>
+      </article>
+    </div>
+  </section>
+</div>
